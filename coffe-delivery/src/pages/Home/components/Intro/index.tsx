@@ -1,8 +1,13 @@
+import { InfoWithIcon } from "../../../../components/InfoWithIcon";
 import { RegularText } from "../../../../components/Typography";
+import { ShoppingCart, Package, Timer, Coffee } from "phosphor-react";
+import { useTheme } from "styled-components";
 import coffeeImg from "../../../../assets/coffee.svg";
-import { IntroContainer, IntroContent, IntroTitle } from "./styles";
+import { BenefitsContainer, IntroContainer, IntroContent, IntroTitle } from "./styles";
 
 export function Intro() {
+    const { colors } = useTheme();
+
     return (
         <IntroContainer>
             <IntroContent className="container">
@@ -16,8 +21,33 @@ export function Intro() {
                             Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora
                         </RegularText>
                     </section>
-                </div>
 
+                    <BenefitsContainer>
+                        <InfoWithIcon
+                            iconBg={colors["brand-yellow-dark"]}
+                            icon={<ShoppingCart weight="fill" />}
+                            text="Compra simples e segura"
+                        />
+
+                        <InfoWithIcon
+                            iconBg={colors["base-text"]}
+                            icon={<Package weight="fill" />}
+                            text="Embalagem mantém o café intacto"
+                        />
+
+                        <InfoWithIcon
+                            iconBg={colors["brand-yellow"]}
+                            icon={<Timer weight="fill" />}
+                            text="Entrega rápida e rastreada"
+                        />
+
+                        <InfoWithIcon
+                            iconBg={colors["brand-purple"]}
+                            icon={<Coffee weight="fill" />}
+                            text="O café chega fresquinho até você"
+                        />
+                    </BenefitsContainer>
+                </div>
                 <img src={coffeeImg} alt="" />
             </IntroContent>
         </IntroContainer>
