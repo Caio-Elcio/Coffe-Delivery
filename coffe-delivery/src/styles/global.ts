@@ -37,4 +37,17 @@ export const GlobalStyle = createGlobalStyle`
     input[type="number"] {
         -moz-appearance: textfield;
     }
+
+    ::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${({ theme }) => theme.colors["brand-purple"]};
+        border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: ${({ theme }) => theme.colors["brand-purple-dark"]};
+    }
 `;
