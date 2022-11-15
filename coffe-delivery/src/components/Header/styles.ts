@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 export const HeaderContainer = styled.header`
     width: 100%;
     height: 6.5rem;
-    background-color: ${({ theme }) => theme.colors["base-background"]};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,6 +10,7 @@ export const HeaderContainer = styled.header`
     top: 0;
     left: 0;
     z-index: 5;
+    background-color: ${({ theme }) => theme.colors["base-background"]};
 
     > div {
         display: flex;
@@ -33,18 +33,38 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
     min-width: 2.3rem; 
     height: 2.3rem;
-    border-radius: 6px;
-    border: none;
     padding: 0 0.5rem;
+    gap: 4px;
+    border: none;
+    border-radius: 6px;
     position: relative;
+    cursor: inherit;
     font-size: ${({ theme }) => theme.textSizes["text-regular-s"]};
+
+    span {
+        position: absolute;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 50%;
+        top: calc(-1.25rem / 2);
+        right: calc(-1.25rem / 2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: ${({ theme }) => theme.colors["base-white"]};
+    }
 
     ${({ variant, theme }) => css`
       background: ${theme.colors[`brand-${variant}-light`]};
       color: ${theme.colors[`brand-${variant}-dark`]};
+
+      span {
+        background: ${theme.colors[`brand-${variant}-dark`]};
+      }
     `}
 
     ${({ variant, theme }) => variant === 'purple' && css`

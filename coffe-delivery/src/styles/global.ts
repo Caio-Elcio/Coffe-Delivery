@@ -9,9 +9,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        -webkit-font-smoothing: antialiased;
         background-color: ${({ theme }) => theme.colors["base-background"]};
         color: ${({ theme }) => theme.colors["base-text"]};
-        -webkit-font-smoothing: antialiased;
     }
 
     body, input, textarea, button {
@@ -43,8 +43,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     ::-webkit-scrollbar-thumb {
-        background: ${({ theme }) => theme.colors["brand-purple"]};
         border-radius: 6px;
+        background: ${({ theme }) => theme.colors["brand-purple"]};
     }
 
     ::-webkit-scrollbar-thumb:hover {

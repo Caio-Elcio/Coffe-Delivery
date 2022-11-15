@@ -3,7 +3,6 @@ import { RegularText, TitleText } from "../../../../components/Typography";
 
 export const CoffeeCardContainer = styled.div`
     width: 100%;
-    background-color: ${({ theme }) => theme.colors["base-card"]};
     border-radius: 6px 36px 6px 36px;
     padding: 1.25rem;
     display: flex;
@@ -12,7 +11,8 @@ export const CoffeeCardContainer = styled.div`
     align-items: center;
     justify-content: center;
     padding-top: 0;
-    
+    background-color: ${({ theme }) => theme.colors["base-card"]};
+
     img {
         width: 7.5rem;
         height: 7.5rem;
@@ -31,13 +31,13 @@ export const Tags = styled.div`
     flex-wrap: wrap;
 
     span {
-        background-color: ${({ theme }) => theme.colors["brand-yellow-light"]};
-        color: ${({ theme }) => theme.colors["brand-yellow-dark"]};
-        font-size: ${({ theme }) => theme.textSizes["components-tag"]};
         text-transform: uppercase;
         padding: 0.25rem 0.5rem;
         border-radius: 999px;
         font-weight: 700;
+        background-color: ${({ theme }) => theme.colors["brand-yellow-light"]};
+        color: ${({ theme }) => theme.colors["brand-yellow-dark"]};
+        font-size: ${({ theme }) => theme.textSizes["components-tag"]};
     }
 `;
 
@@ -76,12 +76,12 @@ export const AddCartWrapper = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: ${({ theme }) => theme.colors["brand-purple-dark"]};
-        color: ${({ theme }) => theme.colors["base-card"]};
         border-radius: 6px;
         margin-left: 0.3rem;
         transition: 0.4s;
-
+        background-color: ${({ theme }) => theme.colors["brand-purple-dark"]};
+        color: ${({ theme }) => theme.colors["base-card"]};
+        
         &::hover {
             background-color: ${({ theme }) => theme.colors["brand-purple"]};
         }

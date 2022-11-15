@@ -5,9 +5,9 @@ export const CoffeCartCardContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid ${({ theme }) => theme.colors["base-button"]};
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
+    border-bottom: 1px solid ${({ theme }) => theme.colors["base-button"]};
 
     > div {
         display: flex;
@@ -43,14 +43,14 @@ export const RemoveButton = styled.button`
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    color: ${({ theme }) => theme.colors["base-text"]};
     font-size: 0.75rem;
     height: 100%;
     border: none;
-    background-color: ${({ theme }) => theme.colors["base-button"]};
     padding: 0 0.5rem;
     border-radius: 6px;
     transition: 0.4s;
+    background-color: ${({ theme }) => theme.colors["base-button"]};
+    color: ${({ theme }) => theme.colors["base-text"]};
 
     svg {
         color: ${({ theme }) => theme.colors["brand-purple"]}

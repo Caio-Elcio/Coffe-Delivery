@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import { Default } from "./layouts/Default"
+import { OrderConfirmedPage } from "./pages/OrderConfirmed";
 import { CompleteOrder } from "./pages/CompleteOrder";
 import { Home } from "./pages/Home";
-import { OrderConfirmedPage } from "./pages/OrderConfirmed";
+import { Default } from "./layouts/Default"
 
 export function Router() {
     return (

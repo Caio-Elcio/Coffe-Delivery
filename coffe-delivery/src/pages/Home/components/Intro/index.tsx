@@ -1,8 +1,8 @@
 import { InfoWithIcon } from "../../../../components/InfoWithIcon";
 import { RegularText } from "../../../../components/Typography";
+import coffeeImg from "../../../../assets/coffee.svg";
 import { ShoppingCart, Package, Timer, Coffee } from "phosphor-react";
 import { useTheme } from "styled-components";
-import coffeeImg from "../../../../assets/coffee.svg";
 import { BenefitsContainer, IntroContainer, IntroContent, IntroTitle } from "./styles";
 
 export function Intro() {
